@@ -10,21 +10,22 @@ class ImageClassifier(nn.Module):
     def __init__(self):
         super().__init__()
         self.model = nn.Sequential(
-            nn.Conv2d(369, 369, 1, bias=False),
+            nn.Conv2d(369, 369, (1,1)),
             nn.LeakyReLU(),
 
-            nn.Conv2d(369, 184, 1, bias=False),
+            nn.Conv2d(369, 369//2, (1,1)),
             nn.LeakyReLU(),
 
-            nn.Conv2d(184, 92, 1, bias=False),
+            nn.Conv2d(369//2, 369//4, (1,1)),
             nn.LeakyReLU(),
 
-            nn.Conv2d(92, 46, 1, bias=False),
+            nn.Conv2d(369//4, 369//8, (1,1)),
             nn.LeakyReLU(),
 
             nn.Flatten(), 
-            nn.Linear(46, 2)  
+
+            nn.Linear(369//8, 2),
         )
 
-    def forward(self, x): 
+    def forward(self, x):
         return self.model(x)

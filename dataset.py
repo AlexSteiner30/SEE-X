@@ -14,7 +14,8 @@ class LoadDataset(data.Dataset):
 
         for i, itImg in enumerate(self.data):
             img_path = "dataset/" + str(itImg['index']) + ".png"
-            self.x.append(itImg['x'])
+
+            self.x.append([itImg['x']])
      
             img = Image.open(img_path)
             self.images.append(np.array(img, dtype=np.float32))
@@ -22,10 +23,9 @@ class LoadDataset(data.Dataset):
         f.close()
   
     def __getitem__(self, idx):
-        self.x = np.array(self.x, dtype=np.float32)
         images = torch.tensor(self.images[idx])
         x = torch.tensor(self.x[idx])
-    
+
         return images, x  
     
     def __len__(self):

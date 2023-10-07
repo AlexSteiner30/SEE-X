@@ -18,7 +18,11 @@ for i in subfolders:
         x = True
 
         with open(j) as f:
-            y = ({"index" : count, "x": f.readline() != ""}) 
+            l = 0
+            if f.readline() != "":
+                l = 1
+
+            y = ({"index" : count, "x": l}) 
             z.append(y)
 
             test_load = nib.load(i + '/orig/TOF.nii.gz').get_fdata()
