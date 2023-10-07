@@ -3,21 +3,20 @@ from dataset import *
 
 dataset = LoadDataset()
 
-clf = ImageClassifier()#.to('cuda')
+clf = ImageClassifier().to('cuda')
 opt = Adam(clf.parameters(), lr=1e-3)
 loss_fn = nn.CrossEntropyLoss() 
 
 if __name__ == "__main__": 
-    for epoch in range(10): 
+    for epoch in range(330): 
         for batch in dataset: 
             x,y = batch 
 
-            x = x.reshape(369,369,1,1)
-            y = y.repeat(369)
+            x = x.reshape(1,1,369,369)
 
-            #x, y = x.to('cuda') , y.to('cuda') 
+            x, y = x.to('cuda'), y.to('cuda') 
 
-            yhat = clf(x) 
+            yhat = clf(x)
 
             loss = loss_fn(yhat, y) 
 
@@ -33,7 +32,7 @@ if __name__ == "__main__":
     with open('model_state.pt', 'rb') as f: 
         clf.load_state_dict(load(f))  
 
-    img = Image.open('dataset/0.png') 
-    img_tensor = ToTensor()(img).unsqueeze(0).reshape(369,369,1,1)#.to('cuda')
+    img = Image.open('dataset/1.png') 
+    img_tensor = ToTensor()(img).unsqueeze(0).reshape(1,1,369,369).to('cuda')
 
     print(torch.argmax(clf(img_tensor)))
