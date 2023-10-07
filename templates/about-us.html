@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="static/css/global.css" />
+    <link rel="stylesheet" href="static/css/about-us.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM Mono:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="aboutus">
+      <img
+        class="pexels-zakir-rushanly-11782003-icon"
+        alt=""
+        src="static/img/pexelszakirrushanly11782003-1@2x.png"
+      />
+
+      <div class="about-us">About us...</div>
+      <div class="home" id="homeText">Home</div>
+      <div class="aboutus-child" id="rectangleInstance"></div>
+      <div class="get-started" id="getStartedText">Get Started</div>
+      <img
+        class="fav-seex-copy-1"
+        alt=""
+        src="static/img/fav-seex-copy-1@2x.png"
+        id="favSEEXCopy1"
+      />
+    </div>
+
+    <script>
+      var homeText = document.getElementById("homeText");
+      if (homeText) {
+        homeText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var getStartedText = document.getElementById("getStartedText");
+      if (getStartedText) {
+        getStartedText.addEventListener("click", function (e) {
+          window.location.href = "/start";
+        });
+      }
+      
+      var favSEEXCopy1 = document.getElementById("favSEEXCopy1");
+      if (favSEEXCopy1) {
+        favSEEXCopy1.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-fredoka: Fredoka;
+  --font-dm-mono: "DM Mono";
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-11xl: 30px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-powderblue: #b3e2e6;
+  --color-skyblue: #75c9d1;
+
+  /* Border radiuses */
+  --br-12xl-5: 31.5px;
+  --br-37xl: 56px;
+}

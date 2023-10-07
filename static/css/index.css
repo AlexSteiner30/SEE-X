@@ -1,0 +1,144 @@
+.pexels-anna-shvets-3844581-1-icon {
+  position: absolute;
+  top: 119px;
+  left: 0;
+  width: 1440px;
+  height: 781px;
+  object-fit: cover;
+  opacity: 0.25;
+}
+.seex-1-icon {
+  position: absolute;
+  top: 14px;
+  left: 21px;
+  width: 237px;
+  height: 97px;
+  object-fit: cover;
+}
+.upload {
+  color: #47b8c2;
+}
+.simply-upload-your-container {
+  position: absolute;
+  top: 195px;
+  left: -12px;
+  font-size: 25px;
+  font-weight: 500;
+  display: inline-block;
+  width: 506px;
+  height: 43px;
+}
+.and-our-ai,
+.with-our-ai {
+  position: absolute;
+  top: 233px;
+  left: 39px;
+  font-weight: 500;
+  text-align: left;
+  display: inline-block;
+  width: 532px;
+  height: 21px;
+}
+.with-our-ai {
+  top: 320px;
+  left: 44px;
+  width: 535px;
+  height: 342px;
+}
+.frame-child,
+.get-started1 {
+  position: absolute;
+  cursor: pointer;
+}
+.frame-child {
+  top: 480px;
+  left: 44px;
+  border-radius: var(--br-12xl-5);
+  background-color: var(--color-powderblue);
+  width: 114px;
+  height: 40px;
+}
+.get-started1 {
+  top: 487px;
+  left: 50px;
+  font-family: var(--font-fredoka);
+  display: inline-block;
+  width: 102px;
+  height: 25px;
+}
+.frame-item {
+  position: absolute;
+  top: 189px;
+  left: 678px;
+  border-radius: 60px;
+  background-color: #f1faff;
+  width: 615px;
+  height: 642px;
+}
+.about-us6 {
+  position: absolute;
+  top: 48px;
+  left: 1310px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-fredoka);
+  display: inline-block;
+  width: 95px;
+  height: 23px;
+  cursor: pointer;
+}
+.pexels-mart-production-7089020-icon {
+  position: absolute;
+  top: 215px;
+  left: 705px;
+  border-radius: 41px;
+  width: 560px;
+  height: 590px;
+  object-fit: cover;
+  opacity: 0.75;
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
+}
+.get-started2,
+.home-child {
+  position: absolute;
+  cursor: pointer;
+}
+.home-child {
+  top: 42px;
+  left: 300px;
+  border-radius: var(--br-12xl-5);
+  background-color: var(--color-powderblue);
+  width: 130px;
+  height: 40px;
+}
+.get-started2 {
+  top: 50px;
+  left: 312px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-fredoka);
+}
+.home4 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-black);
+  font-family: var(--font-dm-mono);
+}
+@media screen and (max-width: 1200px) {
+  .home4 {
+    flex-direction: row;
+    gap: -1896px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}

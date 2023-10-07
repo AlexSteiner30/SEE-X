@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="static/css/global.css" />
+    <link rel="stylesheet" href="static/css/upload.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM Mono:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="filebrain">
+      <img
+        class="pexels-zakir-rushanly-11782003-icon5"
+        alt=""
+        src="static/img/pexelszakirrushanly11782003-11@2x.png"
+      />
+
+      <img
+        class="fav-seex-copy-15"
+        alt=""
+        src="static/img/fav-seex-copy-1@2x.png"
+        id="favSEEXCopy1"
+      />
+
+      <div class="back1" id="backText">Back</div>
+      <div class="about-us5" id="aboutUsText">About Us</div>
+  
+      <form method="POST" action="/outcome" enctype="multipart/form-data">
+        <div class="filebrain-child">
+          <input id="file" name="file" accept="image/*" type="file" style="opacity: 0.0; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height:100%;" required/>
+          <h3 id="text" style="margin-top: 16%;">Your file has been uploaded</h3>
+        </div>
+        <div class="filebrain-item" id="rectangleInstance">
+        </div>
+  
+        <input type="submit" value="Submit" class="get-results1" id="getResultsText">Get Results</input>
+      </form>
+
+      <div class="upload-images-to-container1">
+        <span>Upload </span>
+        <span class="images1">Image/s</span>
+        <span> to get started</span>
+      </div>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById('file');
+      const text = document.getElementById('text');
+      text.style.visibility = "hidden";
+
+      fileInput.onchange = () => {
+        text.style.visibility = "visible";
+      }
+
+      var favSEEXCopy1 = document.getElementById("favSEEXCopy1");
+      if (favSEEXCopy1) {
+        favSEEXCopy1.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var backText = document.getElementById("backText");
+      if (backText) {
+        backText.addEventListener("click", function (e) {
+          window.location.href = "/start";
+        });
+      }
+      
+      var aboutUsText = document.getElementById("aboutUsText");
+      if (aboutUsText) {
+        aboutUsText.addEventListener("click", function (e) {
+          window.location.href = "/about-us";
+        });
+      }
+      </script>
+  </body>
+</html>

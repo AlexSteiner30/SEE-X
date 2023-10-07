@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="static/css/global.css" />
+    <link rel="stylesheet" href="static/css/start.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM Mono:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="start">
+      <img
+        class="pexels-zakir-rushanly-11782003-icon3"
+        alt=""
+        src="static/img/pexelszakirrushanly11782003-11@2x.png"
+      />
+
+      <img
+        class="fav-seex-copy-13"
+        alt=""
+        src="static/img/fav-seex-copy-1@2x.png"
+        id="favSEEXCopy1"
+      />
+
+      <div class="home3" id="homeText">Home</div>
+      <div class="about-us3" id="aboutUsText">About Us</div>
+      <div class="start-child"></div>
+      <div class="start-item"></div>
+      <div class="start-inner" id="rectangleInstance"></div>
+      <div class="thoracic" id="thoracicText">Thoracic</div>
+      <div class="rectangle-div" id="rectangleInstance1"></div>
+      <div class="cerebral" id="cerebralText">Cerebral</div>
+      <div class="what-aneurysm-is-container">
+        <span>What </span>
+        <span class="aneurysm-is-it">aneurysm is it?</span>
+      </div>
+      <div class="or">OR</div>
+      <img
+        class="pexels-cottonbro-studio-887911-icon"
+        alt=""
+        src="static/img/pexelscottonbrostudio8879114-1@2x.png"
+      />
+
+      <img
+        class="pexels-ivan-samkov-4989192-1-icon"
+        alt=""
+        src="static/img/pexelsivansamkov4989192-1@2x.png"
+      />
+    </div>
+
+    <script>
+      var favSEEXCopy1 = document.getElementById("favSEEXCopy1");
+      if (favSEEXCopy1) {
+        favSEEXCopy1.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var homeText = document.getElementById("homeText");
+      if (homeText) {
+        homeText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var aboutUsText = document.getElementById("aboutUsText");
+      if (aboutUsText) {
+        aboutUsText.addEventListener("click", function (e) {
+          window.location.href = "/about-us";
+        });
+      }
+      
+      var thoracicText = document.getElementById("thoracicText");
+      if (thoracicText) {
+        thoracicText.addEventListener("click", function (e) {
+          window.location.href = "/upload";
+        });
+      }
+      
+      var cerebralText = document.getElementById("cerebralText");
+      if (cerebralText) {
+        cerebralText.addEventListener("click", function (e) {
+          window.location.href = "/upload";
+        });
+      }
+      </script>
+  </body>
+</html>
