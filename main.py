@@ -34,6 +34,6 @@ if __name__ == "__main__":
         clf.load_state_dict(load(f))  
 
     img = Image.open('dataset/0.png') 
-    img_tensor = ToTensor()(img).unsqueeze(0)#.to('cuda')
+    img_tensor = ToTensor()(img).unsqueeze(0).reshape(369,369,1,1)#.to('cuda')
 
     print(torch.argmax(clf(img_tensor)))
