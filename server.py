@@ -26,6 +26,7 @@ def outcome():
     f.save('static/files/' + f.filename)
 
     result = predict('static/files/' + f.filename)
+
     output = "has been diagnosed with brain aneurysm"
 
     if result == 0:
