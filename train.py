@@ -4,20 +4,20 @@ import matplotlib.pyplot as plt
 
 dataset = LoadDataset()
 
-clf = ImageClassifier()#.to('cuda')
+clf = ImageClassifier().to('cuda')
 opt = Adam(clf.parameters(), lr=1e-3)
 loss_fn = nn.CrossEntropyLoss() 
 
 losses = []
 
 if __name__ == "__main__": 
-    for epoch in range(300): 
+    for epoch in range(10): 
         for batch in dataset: 
             x,y = batch 
 
             x = x.reshape(1,1,369,369)
 
-            #x, y = x.to('cuda'), y.to('cuda') 
+            x, y = x.to('cuda'), y.to('cuda') 
 
             yhat = clf(x)
 
@@ -37,4 +37,4 @@ if __name__ == "__main__":
         clf.load_state_dict(load(f))  
 
     plt.plot(losses)
-    plt.savefig("losses.png" + str(count), bbox_inches='tight',transparent=True, pad_inches=0)
+    plt.savefig("losses.png", bbox_inches='tight',transparent=True, pad_inches=0)
