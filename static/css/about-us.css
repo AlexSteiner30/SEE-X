@@ -7,25 +7,42 @@
   object-fit: cover;
   opacity: 0.25;
 }
-.about-us,
-.home {
+.about-us1 {
   position: absolute;
-  display: inline-block;
-}
-.about-us {
   top: 214px;
   left: 143px;
   font-size: var(--font-size-11xl);
   font-weight: 500;
-  font-family: var(--font-dm-mono);
+  display: inline-block;
   width: 247px;
   height: 46px;
 }
-.home {
+.we-as-seex {
+  margin: 0;
+}
+.we-as-seex-container {
+  position: absolute;
+  top: 294px;
+  left: 168px;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  text-align: left;
+  display: inline-block;
+  width: 70%;
+  height: 246px;
+}
+.home1 {
   top: 39px;
   left: 297px;
+  font-family: var(--font-fredoka);
+  display: inline-block;
   width: 71px;
   height: 19px;
+}
+.aboutus-child,
+.get-started2,
+.home1 {
+  position: absolute;
   cursor: pointer;
 }
 .aboutus-child {
@@ -38,25 +55,32 @@
   border-radius: var(--br-12xl-5);
   background-color: var(--color-powderblue);
 }
-.aboutus-child,
-.fav-seex-copy-1,
-.get-started {
-  position: absolute;
-  cursor: pointer;
-}
-.get-started {
+.get-started2 {
   top: 39px;
   left: 143px;
+  font-family: var(--font-fredoka);
   display: inline-block;
   width: 115px;
   height: 23px;
+}
+.aboutus-item,
+.fav-seex-copy-1 {
+  position: absolute;
+  object-fit: cover;
 }
 .fav-seex-copy-1 {
   top: 15px;
   left: 20px;
   width: 80px;
   height: 72px;
-  object-fit: cover;
+  cursor: pointer;
+}
+.aboutus-item {
+  top: 480px;
+  left: 980px;
+  width: 380px;
+  height: 380px;
+  opacity: 0.5;
 }
 .aboutus {
   position: relative;
@@ -67,5 +91,5 @@
   text-align: center;
   font-size: var(--font-size-xl);
   color: var(--color-black);
-  font-family: var(--font-fredoka);
+  font-family: var(--font-dm-mono);
 }
