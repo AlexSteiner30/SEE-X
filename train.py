@@ -11,7 +11,7 @@ loss_fn = nn.CrossEntropyLoss()
 losses = []
 
 if __name__ == "__main__": 
-    for epoch in range(10): 
+    for epoch in range(301): 
         for batch in dataset: 
             x,y = batch 
 

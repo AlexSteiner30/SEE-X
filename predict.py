@@ -18,3 +18,6 @@ def predict(x):
     img_tensor = ToTensor()(img).unsqueeze(0).reshape(1,1, 369,369)#.to('cuda')
 
     return torch.argmax(clf(img_tensor)).item()
+
+x = input()
+print(predict('dataset/' + str(x) + '.png'))

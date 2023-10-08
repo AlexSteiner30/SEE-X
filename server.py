@@ -31,6 +31,9 @@ def outcome():
 
     if result == 0:
         output = "doesn't have brain aneurysm"
+
+    # 1 = yes
+    # 0 = no
     
     return render_template('outcome.html', output=output)
 
