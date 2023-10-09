@@ -11,24 +11,25 @@ loss_fn = nn.CrossEntropyLoss()
 losses = []
 
 if __name__ == "__main__": 
-    for epoch in range(301): 
+    for epoch in range(30): 
+        running_loss = 0.0
+
         for batch in dataset: 
             x,y = batch 
-
             x = x.reshape(1,1,369,369)
 
             x, y = x.to('cuda'), y.to('cuda') 
 
-            yhat = clf(x)
-
-            loss = loss_fn(yhat, y) 
-
             opt.zero_grad()
-            loss.backward() 
-            opt.step() 
+            outputs = clf(x)
+            loss = loss_fn(outputs, y)
+            loss.backward()
+            opt.step()
 
-        print(f"Epoch:{epoch} loss is {loss.item()}")
-        losses.append(loss.item())
+            running_loss += loss.item()
+
+        print(f'Epoch {epoch + 1}, Loss: {running_loss / 1}')
+
 
     with open('static/model_state.pt', 'wb') as f: 
         save(clf.state_dict(), f) 
@@ -36,5 +37,12 @@ if __name__ == "__main__":
     with open('static/model_state.pt', 'rb') as f: 
         clf.load_state_dict(load(f))  
 
-    plt.plot(losses)
-    plt.savefig("losses.png", bbox_inches='tight',transparent=True, pad_inches=0)
+    img = Image.open('dataset/0.png') 
+    img_tensor = ToTensor()(img).unsqueeze(0).to('cuda')
+
+    print(torch.argmax(clf(img_tensor)))
+
+    img = Image.open('dataset/2.png') 
+    img_tensor = ToTensor()(img).unsqueeze(0).to('cuda')
+
+    print(torch.argmax(clf(img_tensor)))

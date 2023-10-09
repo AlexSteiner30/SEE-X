@@ -24,6 +24,7 @@ class LoadDataset(data.Dataset):
   
     def __getitem__(self, idx):
         images = torch.tensor(self.images[idx])
+        images = images.reshape(1,369,369)
         x = torch.tensor(self.x[idx])
 
         return images, x  
